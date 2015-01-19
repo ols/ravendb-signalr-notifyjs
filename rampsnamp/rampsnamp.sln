@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rampsnamp.Web", "rampsnamp.Web\rampsnamp.Web.csproj", "{5CD0E12B-5D11-4EDA-9610-F558288F13AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rampsnamp.Core", "rampsnamp.Core\rampsnamp.Core.csproj", "{EAC1F1DE-DC68-4CAB-9E13-5F8631D84186}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CD0E12B-5D11-4EDA-9610-F558288F13AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CD0E12B-5D11-4EDA-9610-F558288F13AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CD0E12B-5D11-4EDA-9610-F558288F13AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CD0E12B-5D11-4EDA-9610-F558288F13AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAC1F1DE-DC68-4CAB-9E13-5F8631D84186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAC1F1DE-DC68-4CAB-9E13-5F8631D84186}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAC1F1DE-DC68-4CAB-9E13-5F8631D84186}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAC1F1DE-DC68-4CAB-9E13-5F8631D84186}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

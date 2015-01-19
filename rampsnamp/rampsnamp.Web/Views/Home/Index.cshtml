@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "User";
+}
+<h2>Create account</h2>
+<div class="form-group">
+    <label class="control-label">Email</label>
+    <input type="text" class="form-control" id="email" />
+</div>
+<div class="form-group">
+    <label class="control-label">Firstname</label>
+    <input type="text" class="form-control" id="firstname" />
+</div>
+<div class="form-group">
+    <input type="button" class="btn btn-success right" id="sendmessage" value="Send" />
+</div>
+
+@section scripts {
+    <script src="~/Scripts/notify.min.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.2.0.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script>
+        $(function () {
+            var chat = $.connection.userHub;
+            chat.client.addNewMessageToPage = function (firstname) {
+                $.notify("New user registered: " + firstname, "success");
+            };
+            $('#email').focus();
+            $.connection.hub.start().done(function () {
+                $('#sendmessage').click(function () {
+                    $.post("/Home/CreateUser", { Email: $('#email').val(), Firstname: $('#firstname').val() }, function (data) {
+                        if (!data.Success) {
+                            $("#email").notify(data.Message);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+}
